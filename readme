@@ -1,0 +1,5 @@
+This project does 
+A] viewing(flat view or tree view): of the content of any folderPath entered
+B] organising classifies all the content files within a folder (whose path is entered by the user) into 5 categories : media,archives,documents,app,others making their copies in a 
+    folder called organizedFolder
+C] The help menu guides the user about what she is doing wrong, what she can do and how can she do it.

@@ -1,6 +1,7 @@
 let fs = require("fs");
 let path = require("path");
 
+//we judge the category of a file by seeing in which label does its extension lies
 let utility = {
     media: ['mp4','mkv','mp3'],
     archives: ['zip','7z','rar','tar','gz','ar','iso','xz'],
@@ -50,6 +51,7 @@ function copyFileAndOrganize(src,dest){
     fs.copyFileSync(src,dest);
 }
 
+//a recursive function that does the DFS
 function organizeHelper(src,dest){
     let isFile = checkFileOrFolder(src);
     if(isFile==true){
@@ -57,7 +59,7 @@ function organizeHelper(src,dest){
         let categoryPath = createFolder(dest,category);
         copyFileAndOrganize(src,categoryPath);
     }else{
-        let children = fs.readdirSync(src);//array that will contain immediate children 
+        let children = fs.readdirSync(src);  //array that will contain immediate children 
         for(let i=0;i<children.length;i++){
             let child = children[i];
             let childPath = path.join(src,child);

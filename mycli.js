@@ -1,3 +1,7 @@
+#!/usr/bin/env node
+//this is the shebang syntax for node
+//i am saying that whenever someone runs this code, it must be run within the javascript environment
+
 let helpFn = require("./commands/help");
 let organizeFn = require("./commands/organize");
 let viewFn = require("./commands/view")
